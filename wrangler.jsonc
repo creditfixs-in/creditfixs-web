@@ -11,7 +11,10 @@
     "binding": "ASSETS"
   },
   "vars": {
-    // Set secrets with: npx wrangler secret put SUPABASE_URL
-    //                   npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+    // Non-secret vars only — these deploy automatically with every `wrangler deploy`.
+    // Origin only, no /rest/v1/ suffix (app/api/contact/route.ts appends it).
+    "SUPABASE_URL": "https://bntmjohncsfctfbfzwmr.supabase.co"
+    // SUPABASE_SERVICE_ROLE_KEY is a secret, set once (persists across deploys):
+    //   npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
   }
 }
