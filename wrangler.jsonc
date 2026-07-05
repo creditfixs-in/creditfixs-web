@@ -1,0 +1,17 @@
+{
+  // Cloudflare Workers config for @opennextjs/cloudflare.
+  // First run: npm i -D @opennextjs/cloudflare wrangler   (see README)
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "creditfixs",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    // Set secrets with: npx wrangler secret put SUPABASE_URL
+    //                   npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+  }
+}

@@ -1,0 +1,16 @@
+﻿# Render Blueprint — deploy by connecting this repo at https://dashboard.render.com
+services:
+  - type: web
+    name: creditfixs
+    runtime: node
+    plan: starter # or "free" for testing
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /en
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: SUPABASE_URL
+        sync: false # set in the Render dashboard
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false # set in the Render dashboard (keep secret)
