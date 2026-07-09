@@ -56,34 +56,34 @@ export default async function ServiceDetailPage({
         ]}
       />
 
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <nav aria-label="Breadcrumb" className="text-sm text-slate-400">
+          <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
-                <Link href={base} className="transition hover:text-emerald-400">
+                <Link href={base} className="transition hover:text-orange-600">
                   {dict.common.breadcrumbHome}
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
               <li>
-                <Link href={`${base}/services`} className="transition hover:text-emerald-400">
+                <Link href={`${base}/services`} className="transition hover:text-orange-600">
                   {dict.nav.services}
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-slate-200">{svc.title}</li>
+              <li className="text-slate-700">{svc.title}</li>
             </ol>
           </nav>
           <div className="mt-8 flex items-start gap-5">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
               <ServiceIcon slug={slug} className="h-7 w-7" />
             </span>
             <div>
               <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
                 {svc.title}
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
                 {svc.short}
               </p>
             </div>
@@ -100,7 +100,7 @@ export default async function ServiceDetailPage({
         <ul className="mt-6 space-y-4">
           {svc.points.map((point) => (
             <li key={point} className="flex items-start gap-3">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-700">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5" aria-hidden="true">
                   <path d="M4 12l5 5L20 7" />
                 </svg>
@@ -110,14 +110,14 @@ export default async function ServiceDetailPage({
           ))}
         </ul>
 
-        <div className="mt-12 rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 px-6 py-10 text-center text-white sm:px-10">
+        <div className="mt-12 rounded-3xl bg-gradient-to-br from-orange-600 to-amber-700 px-6 py-10 text-center text-white sm:px-10">
           <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">{dict.cta.title}</h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-emerald-50 sm:text-base">
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-orange-50 sm:text-base">
             {dict.cta.subtitle}
           </p>
           <Link
             href={`${base}/contact`}
-            className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-emerald-700 shadow-lg transition hover:bg-emerald-50"
+            className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-orange-700 shadow-lg transition hover:bg-orange-50"
           >
             {dict.cta.button}
           </Link>
@@ -126,7 +126,7 @@ export default async function ServiceDetailPage({
         <p className="mt-8">
           <Link
             href={`${base}/services`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-600 transition hover:text-orange-700"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
               <path d="M19 12H5M11 18l-6-6 6-6" />

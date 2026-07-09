@@ -32,12 +32,12 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             {dict.contact.title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {dict.contact.subtitle}
           </p>
         </div>
@@ -56,7 +56,7 @@ export default async function ContactPage({
                 <div>
                   <dt className="font-semibold text-slate-500">{info.emailLabel}</dt>
                   <dd>
-                    <a href={`mailto:${site.email}`} className="text-base font-medium text-emerald-700 transition hover:text-emerald-800">
+                    <a href={`mailto:${site.email}`} className="text-base font-medium text-orange-700 transition hover:text-orange-800">
                       {site.email}
                     </a>
                   </dd>
@@ -64,7 +64,7 @@ export default async function ContactPage({
                 <div>
                   <dt className="font-semibold text-slate-500">{info.phoneLabel}</dt>
                   <dd>
-                    <a href={`tel:${site.phone}`} className="text-base font-medium text-emerald-700 transition hover:text-emerald-800">
+                    <a href={`tel:${site.phone}`} className="text-base font-medium text-orange-700 transition hover:text-orange-800">
                       {site.phoneDisplay}
                     </a>
                   </dd>
@@ -76,7 +76,7 @@ export default async function ContactPage({
                       href={`https://wa.me/${site.whatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-medium text-emerald-700 transition hover:text-emerald-800"
+                      className="text-base font-medium text-orange-700 transition hover:text-orange-800"
                     >
                       {site.phoneDisplay}
                     </a>
@@ -88,8 +88,8 @@ export default async function ContactPage({
                 </div>
               </dl>
             </div>
-            <div className="rounded-3xl border border-emerald-200 bg-emerald-50 p-7">
-              <p className="text-sm font-medium leading-relaxed text-emerald-900">
+            <div className="rounded-3xl border border-orange-200 bg-orange-50 p-7">
+              <p className="text-sm font-medium leading-relaxed text-orange-900">
                 {info.responseNote}
               </p>
             </div>

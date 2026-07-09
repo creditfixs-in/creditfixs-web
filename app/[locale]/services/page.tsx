@@ -33,12 +33,12 @@ export default async function ServicesPage({
 
   return (
     <>
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             {dict.services.title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {dict.services.subtitle}
           </p>
         </div>
@@ -52,10 +52,10 @@ export default async function ServicesPage({
               <li key={slug}>
                 <Link
                   href={`${base}/services/${slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md sm:p-8"
+                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-md sm:p-8"
                 >
                   <div className="flex items-start gap-4">
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-600 group-hover:text-white">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-600 transition group-hover:bg-orange-600 group-hover:text-white">
                       <ServiceIcon slug={slug} />
                     </span>
                     <div>
@@ -65,7 +65,7 @@ export default async function ServicesPage({
                       </p>
                     </div>
                   </div>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-orange-600">
                     {dict.services.learnMore}
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true">
                       <path d="M5 12h14M13 6l6 6-6 6" />
@@ -86,7 +86,7 @@ export default async function ServicesPage({
           </p>
           <Link
             href={`${base}/contact`}
-            className="mt-7 inline-block rounded-full bg-emerald-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+            className="mt-7 inline-block rounded-full bg-orange-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-orange-700"
           >
             {dict.common.freeConsultation}
           </Link>

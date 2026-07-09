@@ -8,7 +8,7 @@ import type { Locale } from "@/lib/i18n/locales";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputCls =
-  "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20";
+  "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20";
 
 export default function ContactForm({
   locale,
@@ -49,8 +49,8 @@ export default function ContactForm({
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center rounded-2xl border border-emerald-200 bg-emerald-50 px-6 py-14 text-center">
-        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-white">
+      <div className="flex flex-col items-center rounded-2xl border border-orange-200 bg-orange-50 px-6 py-14 text-center">
+        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-600 text-white">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
             <path d="M4 12l5 5L20 7" />
           </svg>
@@ -146,7 +146,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-xl bg-orange-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === "submitting" ? form.submitting : form.submit}
       </button>

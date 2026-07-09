@@ -17,8 +17,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #060f22 0%, #0b1b36 60%, #0d9488 160%)",
-          color: "white",
+          background: "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+          color: "#0f172a",
           fontFamily: "sans-serif",
         }}
       >
@@ -28,7 +28,8 @@ export default function OpengraphImage() {
               width: 72,
               height: 72,
               borderRadius: 18,
-              background: "linear-gradient(135deg, #10b981, #0d9488)",
+              background: "linear-gradient(135deg, #f97316, #ea580c)",
+              color: "white",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -40,7 +41,7 @@ export default function OpengraphImage() {
           </div>
           <div style={{ display: "flex", fontSize: 52, fontWeight: 800 }}>
             <span>Credit</span>
-            <span style={{ color: "#34d399" }}>Fixs</span>
+            <span style={{ color: "#ea580c" }}>Fixs</span>
           </div>
         </div>
         <div
@@ -54,11 +55,11 @@ export default function OpengraphImage() {
         >
           Fix your credit score. Unlock the loans you deserve.
         </div>
-        <div style={{ marginTop: 32, fontSize: 30, color: "#94a3b8" }}>
+        <div style={{ marginTop: 32, fontSize: 30, color: "#64748b" }}>
           CIBIL · Experian · Equifax · CRIF High Mark — dispute resolution &
           credit repair for India
         </div>
-        <div style={{ marginTop: 40, fontSize: 26, color: "#34d399", fontWeight: 700 }}>
+        <div style={{ marginTop: 40, fontSize: 26, color: "#ea580c", fontWeight: 700 }}>
           creditfixs.in
         </div>
       </div>

@@ -35,14 +35,14 @@ export default function Header({
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href={base} className="flex shrink-0 items-center gap-2" aria-label="CreditFixs home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-sm">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 text-white shadow-sm">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden="true">
               <path d="M4 17l5-5 4 3 7-8" />
               <path d="M15 7h5v5" />
             </svg>
           </span>
           <span className="text-lg font-extrabold tracking-tight text-slate-900">
-            Credit<span className="text-emerald-600">Fixs</span>
+            Credit<span className="text-orange-600">Fixs</span>
           </span>
         </Link>
 
@@ -54,7 +54,7 @@ export default function Header({
               href={l.href}
               className={`rounded-full px-3.5 py-2 text-sm font-medium transition ${
                 isActive(l.href, l.exact)
-                  ? "bg-emerald-50 text-emerald-700"
+                  ? "bg-orange-50 text-orange-700"
                   : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
               }`}
             >
@@ -67,7 +67,7 @@ export default function Header({
           <LanguageSwitcher locale={locale} />
           <Link
             href={`${base}/contact`}
-            className="hidden rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 sm:inline-block"
+            className="hidden rounded-full bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700 sm:inline-block"
           >
             {nav.getStarted}
           </Link>
@@ -97,7 +97,7 @@ export default function Header({
                   onClick={() => setOpen(false)}
                   className={`block rounded-xl px-4 py-3 text-base font-medium transition ${
                     isActive(l.href, l.exact)
-                      ? "bg-emerald-50 text-emerald-700"
+                      ? "bg-orange-50 text-orange-700"
                       : "text-slate-700 hover:bg-slate-100"
                   }`}
                 >
@@ -109,7 +109,7 @@ export default function Header({
               <Link
                 href={`${base}/contact`}
                 onClick={() => setOpen(false)}
-                className="block rounded-xl bg-emerald-600 px-4 py-3 text-center text-base font-semibold text-white transition hover:bg-emerald-700"
+                className="block rounded-xl bg-orange-600 px-4 py-3 text-center text-base font-semibold text-white transition hover:bg-orange-700"
               >
                 {nav.getStarted}
               </Link>

@@ -45,7 +45,7 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#059669",
+  themeColor: "#ea580c",
 };
 
 export default async function LocaleLayout({

@@ -32,12 +32,12 @@ export default async function ResourcesPage({
 
   return (
     <>
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             {dict.resources.title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {dict.resources.subtitle}
           </p>
         </div>
@@ -54,9 +54,9 @@ export default async function ResourcesPage({
             <li key={article.slug}>
               <Link
                 href={`${base}/resources/${article.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md"
+                className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-md"
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-600">
                   {new Date(article.datePublished).toLocaleDateString("en-IN", {
                     year: "numeric",
                     month: "short",
@@ -64,13 +64,13 @@ export default async function ResourcesPage({
                   })}{" "}
                   · {article.readMinutes} min
                 </p>
-                <h2 className="mt-3 text-xl font-bold leading-snug text-slate-900 group-hover:text-emerald-700">
+                <h2 className="mt-3 text-xl font-bold leading-snug text-slate-900 group-hover:text-orange-700">
                   {article.title}
                 </h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
                   {article.description}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-orange-600">
                   {dict.resources.readMore}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true">
                     <path d="M5 12h14M13 6l6 6-6 6" />

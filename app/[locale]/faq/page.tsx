@@ -34,10 +34,10 @@ export default async function FaqPage({
     <>
       <JsonLd data={faqJsonLd(dict.faq.items)} />
 
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{dict.faq.title}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {dict.faq.subtitle}
           </p>
         </div>
@@ -48,11 +48,11 @@ export default async function FaqPage({
           {dict.faq.items.map((item) => (
             <details
               key={item.q}
-              className="group rounded-2xl border border-slate-200 bg-white shadow-sm open:border-emerald-300"
+              className="group rounded-2xl border border-slate-200 bg-white shadow-sm open:border-orange-300"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-base font-semibold text-slate-900 sm:px-6 sm:text-lg [&::-webkit-details-marker]:hidden">
                 {item.q}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="faq-chevron h-5 w-5 shrink-0 text-emerald-600 transition-transform" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="faq-chevron h-5 w-5 shrink-0 text-orange-600 transition-transform" aria-hidden="true">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </summary>
@@ -69,7 +69,7 @@ export default async function FaqPage({
           </h2>
           <Link
             href={`${base}/contact`}
-            className="mt-6 inline-block rounded-full bg-emerald-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+            className="mt-6 inline-block rounded-full bg-orange-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-orange-700"
           >
             {dict.common.freeConsultation}
           </Link>

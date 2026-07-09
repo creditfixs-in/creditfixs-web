@@ -31,12 +31,12 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className="bg-navy-950 text-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white text-slate-900">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             {dict.about.title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {dict.about.subtitle}
           </p>
         </div>
@@ -57,7 +57,7 @@ export default async function AboutPage({
         <ul className="mt-8 grid gap-5 sm:grid-cols-3">
           {dict.about.values.map((v) => (
             <li key={v.title} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-              <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+              <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden="true">
                   <path d="M12 21c-4.5-2.5-8-5.5-8-10a8 8 0 0 1 16 0c0 4.5-3.5 7.5-8 10z" />
                   <path d="M9.5 11l2 2 3.5-3.5" />
@@ -72,7 +72,7 @@ export default async function AboutPage({
         <div className="mt-14 text-center">
           <Link
             href={`${base}/contact`}
-            className="inline-block rounded-full bg-emerald-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+            className="inline-block rounded-full bg-orange-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-orange-700"
           >
             {dict.common.freeConsultation}
           </Link>

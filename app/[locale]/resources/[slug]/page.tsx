@@ -68,7 +68,7 @@ export default async function ArticlePage({
         <header>
           <Link
             href={`${base}/resources`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-600 transition hover:text-orange-700"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
               <path d="M19 12H5M11 18l-6-6 6-6" />
@@ -113,7 +113,7 @@ export default async function ArticlePage({
                 <ul className="mt-4 space-y-3">
                   {section.list.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
                       <span className="text-base leading-relaxed text-slate-700">{item}</span>
                     </li>
                   ))}
@@ -123,14 +123,14 @@ export default async function ArticlePage({
           ))}
         </div>
 
-        <div className="mt-14 rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 px-6 py-10 text-center text-white sm:px-10">
+        <div className="mt-14 rounded-3xl bg-gradient-to-br from-orange-600 to-amber-700 px-6 py-10 text-center text-white sm:px-10">
           <h2 className="text-2xl font-extrabold tracking-tight">{dict.cta.title}</h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-emerald-50 sm:text-base">
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-orange-50 sm:text-base">
             {dict.cta.subtitle}
           </p>
           <Link
             href={`${base}/contact`}
-            className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-emerald-700 shadow-lg transition hover:bg-emerald-50"
+            className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-orange-700 shadow-lg transition hover:bg-orange-50"
           >
             {dict.cta.button}
           </Link>
