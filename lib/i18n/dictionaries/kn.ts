@@ -348,6 +348,7 @@ const kn: Dictionary = {
     backToResources: "ಎಲ್ಲಾ ಸಂಪನ್ಮೂಲಗಳು",
     englishNote: "ಈ ಗೈಡ್ ಪ್ರಸ್ತುತ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ.",
     publishedOn: "ಪ್ರಕಟಿಸಲಾಗಿದೆ",
+    minutesShort: "ನಿಮಿಷ",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const kn: Dictionary = {
   common: {
     breadcrumbHome: "ಮುಖಪುಟ",
     freeConsultation: "ಉಚಿತ ಸಮಾಲೋಚನೆ",
+    lastUpdated: "ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಲಾಗಿದೆ",
   },
 };
 

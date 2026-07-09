@@ -348,6 +348,7 @@ const gu: Dictionary = {
     backToResources: "બધાં સંસાધનો",
     englishNote: "આ માર્ગદર્શિકા હાલમાં અંગ્રેજીમાં ઉપલબ્ધ છે.",
     publishedOn: "પ્રકાશિત",
+    minutesShort: "મિનિટ",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const gu: Dictionary = {
   common: {
     breadcrumbHome: "હોમ",
     freeConsultation: "મફત સલાહ",
+    lastUpdated: "છેલ્લે અપડેટ કરાયું",
   },
 };
 

@@ -3,16 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, localeTags, type Locale } from "@/lib/i18n/locales";
 import { articleJsonLd, breadcrumbJsonLd, buildMetadata } from "@/lib/seo";
-import { articles, getArticle } from "@/lib/resources";
+import { articleSlugs, getArticle, hasTranslation } from "@/lib/resources";
 import { site } from "@/lib/site";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
-    articles.map((a) => ({ locale, slug: a.slug })),
+    articleSlugs.map((slug) => ({ locale, slug })),
   );
 }
 
@@ -23,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const l = (isLocale(locale) ? locale : "en") as Locale;
-  const article = getArticle(slug);
+  const article = getArticle(slug, l);
   if (!article) return {};
   return buildMetadata({
     locale: l,
@@ -40,10 +40,13 @@ export default async function ArticlePage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const article = getArticle(slug);
+  const article = getArticle(slug, locale);
   if (!article) notFound();
   const dict = getDictionary(locale);
   const base = `/${locale}`;
+  const translated = hasTranslation(slug, locale);
+  const contentLang = translated ? localeTags[locale] : "en";
+  const showEnglishNote = locale !== "en" && !translated;
 
   return (
     <>
@@ -64,7 +67,7 @@ export default async function ArticlePage({
         ]}
       />
 
-      <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8" lang="en">
+      <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8" lang={contentLang}>
         <header>
           <Link
             href={`${base}/resources`}
@@ -81,15 +84,15 @@ export default async function ArticlePage({
           <p className="mt-4 text-sm font-medium text-slate-500">
             {dict.resources.publishedOn}{" "}
             <time dateTime={article.datePublished}>
-              {new Date(article.datePublished).toLocaleDateString("en-IN", {
+              {new Date(article.datePublished).toLocaleDateString(localeTags[locale], {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })}
             </time>{" "}
-            · {article.readMinutes} min
+            · {article.readMinutes} {dict.resources.minutesShort}
           </p>
-          {locale !== "en" && (
+          {showEnglishNote && (
             <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
               {dict.resources.englishNote}
             </p>

@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  /* Inter covers Latin; --font-noto is set per-locale (layout.tsx) to the
+     matching Indian-script font. Inter first so Latin/numerals stay consistent,
+     then the script font handles glyphs Inter lacks. Falls back cleanly when
+     --font-noto is undefined (English). */
+  --font-sans: var(--font-inter), var(--font-noto, ui-sans-serif), system-ui,
+    -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --color-navy-50: #f0f4fa;
   --color-navy-100: #dce5f2;
   --color-navy-700: #1e3a5f;

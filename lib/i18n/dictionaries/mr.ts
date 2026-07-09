@@ -348,6 +348,7 @@ const mr: Dictionary = {
     backToResources: "सर्व संसाधने",
     englishNote: "ही मार्गदर्शिका सध्या इंग्रजीत उपलब्ध आहे.",
     publishedOn: "प्रकाशित",
+    minutesShort: "मिनिटे",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const mr: Dictionary = {
   common: {
     breadcrumbHome: "मुख्यपृष्ठ",
     freeConsultation: "मोफत सल्ला",
+    lastUpdated: "शेवटचे अद्यतन",
   },
 };
 

@@ -123,6 +123,7 @@ export interface Dictionary {
     backToResources: string;
     englishNote: string;
     publishedOn: string;
+    minutesShort: string;
   };
   footer: {
     tagline: string;
@@ -138,5 +139,6 @@ export interface Dictionary {
   common: {
     breadcrumbHome: string;
     freeConsultation: string;
+    lastUpdated: string;
   };
 }

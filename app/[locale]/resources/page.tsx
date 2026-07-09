@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, localeTags, type Locale } from "@/lib/i18n/locales";
 import { buildMetadata } from "@/lib/seo";
-import { articles } from "@/lib/resources";
+import { getArticles, hasTranslation } from "@/lib/resources";
 
 export async function generateMetadata({
   params,
@@ -29,6 +29,9 @@ export default async function ResourcesPage({
   const { locale } = await params;
   const dict = getDictionary(locale);
   const base = `/${locale}`;
+  const articles = getArticles(locale);
+  const someUntranslated =
+    locale !== "en" && articles.some((a) => !hasTranslation(a.slug, locale));
 
   return (
     <>
@@ -44,7 +47,7 @@ export default async function ResourcesPage({
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
-        {locale !== "en" && (
+        {someUntranslated && (
           <p className="mb-8 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
             {dict.resources.englishNote}
           </p>
@@ -57,12 +60,12 @@ export default async function ResourcesPage({
                 className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-md"
               >
                 <p className="text-xs font-semibold uppercase tracking-wide text-orange-600">
-                  {new Date(article.datePublished).toLocaleDateString("en-IN", {
+                  {new Date(article.datePublished).toLocaleDateString(localeTags[locale], {
                     year: "numeric",
                     month: "short",
                     day: "numeric",
                   })}{" "}
-                  · {article.readMinutes} min
+                  · {article.readMinutes} {dict.resources.minutesShort}
                 </p>
                 <h2 className="mt-3 text-xl font-bold leading-snug text-slate-900 group-hover:text-orange-700">
                   {article.title}

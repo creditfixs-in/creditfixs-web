@@ -1,26 +1,11 @@
-export interface ArticleSection {
-  heading?: string;
-  paragraphs?: string[];
-  list?: string[];
-}
+import type { ArticleContent } from "../types";
 
-export interface Article {
-  slug: string;
-  title: string;
-  description: string;
-  datePublished: string; // ISO date
-  readMinutes: number;
-  sections: ArticleSection[];
-}
-
-export const articles: Article[] = [
-  {
-    slug: "how-to-fix-cibil-score",
+/** English article copy (also the fallback for any locale missing a translation). */
+export const en: Record<string, ArticleContent> = {
+  "how-to-fix-cibil-score": {
     title: "How to Fix Your CIBIL Score: A Step-by-Step Guide for India",
     description:
       "A practical, step-by-step guide to repairing a low CIBIL score — from getting your report and spotting errors to raising disputes and rebuilding credit habits.",
-    datePublished: "2026-05-10",
-    readMinutes: 7,
     sections: [
       {
         paragraphs: [
@@ -65,13 +50,10 @@ export const articles: Article[] = [
       },
     ],
   },
-  {
-    slug: "pc-financial-cashbean-entry-on-credit-report",
+  "pc-financial-cashbean-entry-on-credit-report": {
     title: "PC Financial (CashBean) Entry on Your Credit Report? Here's What to Do",
     description:
       "Thousands of Indians still see PC Financial / CashBean loan entries on CIBIL and other bureaus — often wrong, repaid or never taken. Here's how to dispute them.",
-    datePublished: "2026-05-24",
-    readMinutes: 6,
     sections: [
       {
         paragraphs: [
@@ -102,13 +84,10 @@ export const articles: Article[] = [
       },
     ],
   },
-  {
-    slug: "sunidhi-capital-loan-entry-dispute",
+  "sunidhi-capital-loan-entry-dispute": {
     title: "Sunidhi Capital Loan Entry Hurting Your CIBIL? How to Dispute It",
     description:
       "Seeing a Sunidhi Capital (loan-app) entry you don't recognise or already repaid? Step-by-step dispute process for app-lender NBFC entries in India.",
-    datePublished: "2026-06-02",
-    readMinutes: 5,
     sections: [
       {
         paragraphs: [
@@ -138,13 +117,10 @@ export const articles: Article[] = [
       },
     ],
   },
-  {
-    slug: "home-loan-rejected-low-cibil",
+  "home-loan-rejected-low-cibil": {
     title: "Home Loan Rejected Due to Low CIBIL? Your Recovery Roadmap",
     description:
       "Why banks reject home loans on credit grounds, what the rejection actually means, and a realistic 3–6 month roadmap to approval.",
-    datePublished: "2026-06-12",
-    readMinutes: 7,
     sections: [
       {
         paragraphs: [
@@ -178,13 +154,10 @@ export const articles: Article[] = [
       },
     ],
   },
-  {
-    slug: "cibil-vs-experian-vs-equifax-vs-crif",
+  "cibil-vs-experian-vs-equifax-vs-crif": {
     title: "CIBIL vs Experian vs Equifax vs CRIF High Mark: What's the Difference?",
     description:
       "India has four RBI-licensed credit bureaus, and your score differs at each. What each bureau is, why scores differ, and why you must check all four.",
-    datePublished: "2026-06-18",
-    readMinutes: 5,
     sections: [
       {
         paragraphs: [
@@ -214,13 +187,10 @@ export const articles: Article[] = [
       },
     ],
   },
-  {
-    slug: "settled-vs-closed-loan-status",
+  "settled-vs-closed-loan-status": {
     title: "'Settled' vs 'Closed' Loan Status: Why It Matters for Your Score",
     description:
       "The difference between Settled and Closed on your credit report, how much damage a Settled flag does, and how to convert it to Closed.",
-    datePublished: "2026-06-25",
-    readMinutes: 4,
     sections: [
       {
         paragraphs: [
@@ -249,8 +219,4 @@ export const articles: Article[] = [
       },
     ],
   },
-];
-
-export function getArticle(slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug);
-}
+};

@@ -348,6 +348,7 @@ const hi: Dictionary = {
     backToResources: "सभी संसाधन",
     englishNote: "यह गाइड अभी अंग्रेज़ी में उपलब्ध है।",
     publishedOn: "प्रकाशित",
+    minutesShort: "मिनट",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const hi: Dictionary = {
   common: {
     breadcrumbHome: "होम",
     freeConsultation: "मुफ़्त परामर्श",
+    lastUpdated: "अंतिम अपडेट",
   },
 };
 

@@ -348,6 +348,7 @@ const bn: Dictionary = {
     backToResources: "সব সম্পদ",
     englishNote: "এই গাইডটি বর্তমানে ইংরেজিতে উপলব্ধ।",
     publishedOn: "প্রকাশিত",
+    minutesShort: "মিনিট",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const bn: Dictionary = {
   common: {
     breadcrumbHome: "হোম",
     freeConsultation: "বিনামূল্যে পরামর্শ",
+    lastUpdated: "সর্বশেষ আপডেট",
   },
 };
 

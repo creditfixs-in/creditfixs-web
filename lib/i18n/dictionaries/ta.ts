@@ -348,6 +348,7 @@ const ta: Dictionary = {
     backToResources: "அனைத்து வளங்களும்",
     englishNote: "இந்த வழிகாட்டி தற்போது ஆங்கிலத்தில் உள்ளது.",
     publishedOn: "வெளியிடப்பட்டது",
+    minutesShort: "நிமிடம்",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const ta: Dictionary = {
   common: {
     breadcrumbHome: "முகப்பு",
     freeConsultation: "இலவச ஆலோசனை",
+    lastUpdated: "கடைசியாக புதுப்பிக்கப்பட்டது",
   },
 };
 

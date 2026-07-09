@@ -349,6 +349,7 @@ const en: Dictionary = {
     backToResources: "All resources",
     englishNote: "This guide is currently available in English.",
     publishedOn: "Published",
+    minutesShort: "min",
   },
   footer: {
     tagline:
@@ -366,6 +367,7 @@ const en: Dictionary = {
   common: {
     breadcrumbHome: "Home",
     freeConsultation: "Free Consultation",
+    lastUpdated: "Last updated",
   },
 };
 

@@ -348,6 +348,7 @@ const te: Dictionary = {
     backToResources: "అన్ని వనరులు",
     englishNote: "ఈ గైడ్ ప్రస్తుతం ఇంగ్లీష్‌లో అందుబాటులో ఉంది.",
     publishedOn: "ప్రచురణ",
+    minutesShort: "నిమిషాలు",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const te: Dictionary = {
   common: {
     breadcrumbHome: "హోమ్",
     freeConsultation: "ఉచిత సంప్రదింపు",
+    lastUpdated: "చివరిగా నవీకరించబడింది",
   },
 };
 

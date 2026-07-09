@@ -348,6 +348,7 @@ const pa: Dictionary = {
     backToResources: "ਸਾਰੇ ਸਰੋਤ",
     englishNote: "ਇਹ ਗਾਈਡ ਇਸ ਵੇਲੇ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਉਪਲਬਧ ਹੈ।",
     publishedOn: "ਪ੍ਰਕਾਸ਼ਿਤ",
+    minutesShort: "ਮਿੰਟ",
   },
   footer: {
     tagline:
@@ -365,6 +366,7 @@ const pa: Dictionary = {
   common: {
     breadcrumbHome: "ਹੋਮ",
     freeConsultation: "ਮੁਫ਼ਤ ਸਲਾਹ",
+    lastUpdated: "ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ",
   },
 };
 
